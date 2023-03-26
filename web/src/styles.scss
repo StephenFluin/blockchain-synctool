@@ -45,8 +45,9 @@ input[type='email'] {
     color: #fff;
 }
 
-button[type='submit'] {
+button {
     padding: 10px 20px;
+    margin:8px;
     border-radius: 5px;
     border: none;
     background-color: #c62828;
@@ -56,6 +57,6 @@ button[type='submit'] {
     transition: background-color 0.3s ease;
 }
 
-button[type='submit']:hover {
+button:hover {
     background-color: #8e0000;
 }
