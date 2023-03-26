@@ -1,27 +1,34 @@
 <div class="container">
-  <h1>Blockchain SyncTool</h1>
-  <p>Built for the Scaling Ethereum ETHGlobal Hackathon 2023.</p>
-  <p>This project is designed to synchronize attributes of smart contracts across blockchains using the Axelar network.
-  </p>
-  <button (click)="connect()" *ngIf="!account">Connect Wallet</button>
-  <p *ngIf="account">Connected to {{account}}<!-- on {{chainName}}--></p>
-  <div style="display:flex;justify-content:space-around;">
-    <div>
-      <h2>Avalanche</h2>
-      <div>Current Token Max Supply</div>
-      <form>
-        <input type="text">
-        <button type="submit">Submit</button>
+    <h1>Blockchain SyncTool</h1>
+    <p>Built for the Scaling Ethereum ETHGlobal Hackathon 2023.</p>
+    <p>
+        This project is designed to synchronize attributes of smart contracts across blockchains using the Axelar
+        network.
+    </p>
+    <button (click)="connect()" *ngIf="!account">Connect Wallet</button>
+    <p *ngIf="account">
+        Connected to {{ account
+        }}<!-- on {{chainName}}-->
+    </p>
+    <div style="display: flex; justify-content: space-around">
+        <div>
+            <h2>Avalanche</h2>
+            <div *ngIf="chainABalance >= 0">Balance: {{ chainABalance }}</div>
 
-      </form>
+            <form>
+                Set Balance:
+                <input type="number" />
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div>
+            <h2>Polygon</h2>
+            <div *ngIf="chainBBalance >= 0">Balance: {{ chainBBalance }}</div>
+            <form>
+                Set Balance: <input type="number" />
+                <button type="submit">Submit</button>
+            </form>
+        </div>
     </div>
-    <div>
-      <h2>Polygon</h2>
-      <form>
-        <input type="text">
-        <button type="submit">Submit</button>
-
-      </form>
-    </div>
-  </div>
 </div>
+<div style="text-align: center; color: grey; margin: 16px">Balances auto-update every 30 seconds.</div>

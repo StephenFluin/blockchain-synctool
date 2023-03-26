@@ -15,3 +15,7 @@ yarn
 yarn setup
 yarn start
 ```
+
+
+## Todo
+[ ] Angular 15 doesn't work with ethers nicely. I don't know why. Bundling changes & typescript changes likely.

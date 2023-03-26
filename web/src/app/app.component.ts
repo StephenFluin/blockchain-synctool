@@ -23,6 +23,9 @@ export class AppComponent {
     account: string = '';
     chainName: string = '';
 
+    chainABalance = -1;
+    chainBBalance = -1;
+
     constructor(router: Router, title: Title, public changeDetector: ChangeDetectorRef) {
         // Google Analytics
         router.events.pipe(filter((e) => e instanceof NavigationEnd)).subscribe((n: any) => {
