@@ -5,6 +5,9 @@ pragma solidity ^0.8.0;
 import { AxelarExecutable } from '@axelar-network/axelar-gmp-sdk-solidity/contracts/executable/AxelarExecutable.sol';
 import { IAxelarGateway } from '@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IAxelarGateway.sol';
 import { IAxelarGasService } from '@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IAxelarGasService.sol';
+// have to include this so deployments work, which depend on the artifact being compiled
+import { IERC20 as ZZZ } from '@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IERC20.sol';
+
 import '../lib/ERC20.sol';
 
 // THIS ERC20 IS ONLY FOR DEMONSTRATION PURPOSES, DON'T USE IN PROD
@@ -28,7 +31,7 @@ contract SyncedToken is ERC20, AxelarExecutable {
         gateway.callContract(remoteChain, remoteAddress, payload);
     }
 
-    function connect(string calldata remoteChain_, string calldata remoteAddress_) external {
+    function connect(string calldata remoteChain_, string calldata remoteAddress_) external payable {
         remoteChain = remoteChain_;
         remoteAddress = remoteAddress_;
         bytes memory payload = abi.encode(1);

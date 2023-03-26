@@ -19,3 +19,6 @@ yarn start
 
 ## Todo
 [ ] Angular 15 doesn't work with ethers nicely. I don't know why. Bundling changes & typescript changes likely.
+
+## Other Notes
+We use a local version of OpenZeppelin's ERC20 contract so that we can make _balances an internal rather than a private variable. 

@@ -12,11 +12,10 @@
         "execute": "node scripts/runExecute",
         "setup": "node scripts/runCreatePrivateKey",
         "check-balance": "node scripts/runCheckBalance",
-        "build": "rm -rf artifacts && npx hardhat clean && npx hardhat compile",
-        "build-aptos": "./build-aptos.sh"
+        "build": "rm -rf artifacts && npx hardhat clean && npx hardhat compile"
     },
     "author": "",
-    "license": "ISC",
+    "license": "MIT",
     "dependencies": {
         "@axelar-network/axelar-cgp-solidity": "^4.5.0",
         "@axelar-network/axelar-gmp-sdk-solidity": "^3.2.0",

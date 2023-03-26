@@ -2,15 +2,14 @@
 
 const { Contract, getDefaultProvider } = require('ethers');
 const { calculateBridgeFee, getDepositAddress } = require('./utils.js');
-const { sourceChain } = require('../../examples/evm/call-contract-with-token-express/index.js');
+// const { sourceChain } = require('../../examples/evm/call-contract-with-token-express/index.js');
 const AxelarGatewayContract = rootRequire(
     'artifacts/@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IAxelarGateway.sol/IAxelarGateway.json',
 );
 const AxelarGasServiceContract = rootRequire(
     'artifacts/@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IAxelarGasService.sol/IAxelarGasService.json',
 );
-const IERC20 = rootRequire('artifacts/@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IERC20.sol/IERC20.json');
-
+// const IERC20 = rootRequire('artifacts/@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IERC20.sol/IERC20.json');
 /**
  * Execute an example script. The example script must have an `execute` function.
  * @param {*} env - The environment to execute on.
