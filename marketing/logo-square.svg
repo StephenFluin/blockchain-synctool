@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="221.01311mm"
+   height="221.01311mm"
+   viewBox="0 0 221.01311 221.01311"
+   version="1.1"
+   id="svg5"
+   inkscape:export-filename="/home/stephen/workspace/stephenfluin/scaling-ethereum-synctool/marketing/logo-square.png"
+   inkscape:export-xdpi="235.36703"
+   inkscape:export-ydpi="235.36703"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   sodipodi:docname="logo-square.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.77771465"
+     inkscape:cx="412.10488"
+     inkscape:cy="563.83148"
+     inkscape:window-width="3840"
+     inkscape:window-height="2039"
+     inkscape:window-x="3840"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <rect
+       x="20.098452"
+       y="66.86422"
+       width="754.45721"
+       height="355.21439"
+       id="rect2564" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(4.0833206,0.5480423)">
+    <circle
+       style="fill:#ff0000;stroke-width:0.264583"
+       id="path23942"
+       cx="106.42323"
+       cy="109.95851"
+       r="110.50655" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.33832557,0,0,0.33832557,-25.977484,41.229787)"
+       id="text2562"
+       style="font-style:normal;font-weight:normal;font-size:96px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect2564);fill:#ffffff;fill-opacity:1;stroke:none"
+       x="354.47919"
+       y="0"><tspan
+         x="109.32788"
+         y="154.2113"
+         id="tspan24108"><tspan
+           style="font-weight:bold;font-family:'Nimbus Mono PS';-inkscape-font-specification:'Nimbus Mono PS Bold';text-align:center;text-anchor:middle"
+           id="tspan24106">Blockchain
+</tspan></tspan><tspan
+         x="166.92773"
+         y="291.67132"
+         id="tspan24112"><tspan
+           style="font-weight:bold;font-family:'Nimbus Mono PS';-inkscape-font-specification:'Nimbus Mono PS Bold';text-align:center;text-anchor:middle"
+           id="tspan24110">SyncTool</tspan></tspan></text>
+  </g>
+</svg>
