@@ -55,6 +55,11 @@ export class AppComponent {
             window.gtag('config', 'G-F29DBWYW6T', { page_path: n.urlAfterRedirects });
         });
 
+
+        if(!this.ethereum) {
+            this.msg = 'Please install a wallet (like MetaMask) to use this application';
+            return;
+        }
         this.ethereum.on('chainChanged', (chainId: string) => {
             console.log('chain changed to', chainId);
             this.browserProvider = new ethers.BrowserProvider(window.ethereum);

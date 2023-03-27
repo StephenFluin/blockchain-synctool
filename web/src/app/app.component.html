@@ -7,41 +7,49 @@
         propagate. By using the smart contracts in this repository, this sort of syncing can be achieved on any smart
         contract.
     </p>
-    <button (click)="connect()" *ngIf="!account">Connect Wallet</button>
-    <p *ngIf="account">
-        Connected to {{ account
-        }}<!-- on {{chainName}}-->
-    </p>
+    <ng-container *ngIf="ethereum">
+        <button (click)="connect()" *ngIf="!account">Connect Wallet</button>
+        <p *ngIf="account">
+            Connected to {{ account
+            }}<!-- on {{chainName}}-->
+        </p>
+    </ng-container>
+    <ng-container *ngIf="!ethereum">
+        Please install a crypto wallet like <a href="https://metamask.io">Metamask</a>.
+    </ng-container>
     <div style="display: flex; justify-content: space-around">
         <div>
             <h2>Polygon</h2>
             <div *ngIf="chainABalance >= 0"><a
-                    href="https://mumbai.polygonscan.com/address/0x4a3c470930650260DD854967330E4E5C77b24911" target="_blank">Balance:
+                    href="https://mumbai.polygonscan.com/address/0x4a3c470930650260DD854967330E4E5C77b24911"
+                    target="_blank">Balance:
                     {{ chainABalance }} MATIC</a></div>
 
-            <form (submit)="submitChainA($event)">
+            <form (submit)="submitChainA($event)" *ngIf="ethereum">
                 Set Balance:
                 <input type="number" [value]="chainABalance >= 0 ? chainABalance : null" />
                 <button type="submit">Update</button>
             </form>
-            <div *ngIf="chainAHash" class="hash"><a
-                    href="https://mumbai.polygonscan.com/tx/{{chainAHash}}" target="_blank">{{chainAHash}}</a></div>
+            <div *ngIf="chainAHash" class="hash"><a href="https://mumbai.polygonscan.com/tx/{{chainAHash}}"
+                    target="_blank">{{chainAHash}}</a></div>
 
         </div>
         <div>
             <h2>Optimism</h2>
             <div *ngIf="chainBBalance >= 0"><a
-                    href="https://goerli-optimism.etherscan.io/address/0xC4f04B94353c798454C008D19648350331C515C8" target="_blank">Balance:
+                    href="https://goerli-optimism.etherscan.io/address/0xC4f04B94353c798454C008D19648350331C515C8"
+                    target="_blank">Balance:
                     {{ chainBBalance }} ETH</a></div>
-            <form (submit)="submitChainB($event)">
+            <form (submit)="submitChainB($event)" *ngIf="ethereum">
                 Set Balance: <input type="number" [value]="chainBBalance >= 0 ? chainBBalance : null" />
                 <button type="submit">Update</button>
             </form>
-            <div *ngIf="chainBHash" class="hash"><a
-                    href="https://goerli-optimism.etherscan.io/tx/{{chainBHash}}" target="_blank">{{chainBHash}}</a></div>
+            <div *ngIf="chainBHash" class="hash"><a href="https://goerli-optimism.etherscan.io/tx/{{chainBHash}}"
+                    target="_blank">{{chainBHash}}</a></div>
         </div>
     </div>
     <div>{{msg}}</div>
-    <div *ngIf="axlHash"><a href="https://testnet.axelarscan.io/gmp/{{axlHash}}" target="_blank">Monitor on Axelarscan</a></div>
+    <div *ngIf="axlHash"><a href="https://testnet.axelarscan.io/gmp/{{axlHash}}" target="_blank">Monitor on
+            Axelarscan</a></div>
 </div>
 <div style=" text-align: center; color: grey; margin: 16px">Balances auto-update every 30 seconds.</div>
