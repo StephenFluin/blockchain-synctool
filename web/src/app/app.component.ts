@@ -35,7 +35,7 @@ export class AppComponent {
     };
     costs = {
         polygon: "2",
-        optimism: ".0001"
+        optimism: ".01"
     }
     chainAContract = new ethers.Contract(this.chains.polygon, SyncTokenAbi, this.chainAProvider);
     chainBContract = new ethers.Contract(this.chains.optimism, SyncTokenAbi, this.chainBProvider);
